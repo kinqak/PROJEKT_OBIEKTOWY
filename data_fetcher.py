@@ -13,10 +13,10 @@ class MatchDataFetcher:
     @log_call
     def _download_html(self):
         headers = {"User-Agent": "Mozilla/5.0"}
-        response = requests.get(self.url, headers=headers, timeout=15)
-        response.raise_for_status()
-        return response.text
-    
+        r = requests.get(self.url, headers=headers, timeout=15)
+        r.raise_for_status()
+        return r.text
+
     def fetch_matches(self):
         html = self._download_html()
 
