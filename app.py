@@ -33,7 +33,13 @@ menu = st.sidebar.radio(
     ["Strona główna", "Analiza drużyny", "Wykresy", "Testy jednostkowe"]
 )
 
-matches, download_time = load_data()
+with st.spinner("Pobieram dane z PZKosz..."):
+    try:
+        matches, download_time = load_data()
+    except Exception as e:
+        st.error("Nie udało się pobrać danych (PZKosz).")
+        st.exception(e)
+        st.stop()
 team = BasketballTeam(TEAM_NAME, matches)
 analysis = BasketAnalysis(team)
 results = analysis.run()
