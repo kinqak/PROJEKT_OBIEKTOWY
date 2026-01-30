@@ -21,7 +21,7 @@ from plots import (
 TEAM_URL = "https://rozgrywki.pzkosz.pl/liga/4/druzyny/d/4119/basket-hills-bielsko-biala/terminarz.html"
 TEAM_NAME = "Basket Hills Bielsko-Biała"
 
-st.set_page_config(page_title="Basket Hills – analiza danych", layout="wide")
+st.set_page_config(page_title="Basket Hills - analiza danych", layout="wide")
 
 @st.cache_data
 def load_data():

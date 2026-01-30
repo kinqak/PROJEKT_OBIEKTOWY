@@ -32,7 +32,7 @@ class MatchDataFetcher:
                 right_team = cols[3]
                 date = cols[4]
 
-                if ":" not in score or "–" in score or "-" in score:
+                if ":" not in score or "-" in score or "-" in score:
                     continue
 
                 try:
