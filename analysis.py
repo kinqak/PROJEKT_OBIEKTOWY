@@ -86,6 +86,6 @@ class BasketAnalysis:
             "point_diff": self.point_difference(self.df),
             "top_games": self.top_bottom_games(self.df)[0],
             "bottom_games": self.top_bottom_games(self.df)[1],
-            "streaks": self.longest_streak(self.df),  # 👈 nowa analiza
+            "streaks": self.longest_streak(self.df),  
             "df": self.df
         }
